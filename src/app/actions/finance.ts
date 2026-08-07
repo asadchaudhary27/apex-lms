@@ -230,7 +230,7 @@ export async function recordStudentPayment(formData: FormData) {
         amount,
         method,
         reference,
-        recordedById: session.user.id
+        recordedById: session.user.id!
       }
     }),
     prisma.feeVoucher.update({

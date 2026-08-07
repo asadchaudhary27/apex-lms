@@ -28,6 +28,9 @@ async function main() {
     { id: "u-admin",   email: "admin@lms.com",         name: "Mrs. Sara Khan",     role: "ADMIN",      pass: "admin123",   permissions: '["MANAGE_USERS","MANAGE_FEES","VIEW_FINANCE","MANAGE_LEAVES"]' },
     { id: "u-hod",     email: "hod@lms.com",           name: "Prof. Ali Hassan",   role: "HOD",        pass: "employee123", permissions: '["MANAGE_COURSES","MANAGE_EXAMS"]' },
     { id: "u-employee", email: "employee@lms.com",        name: "Mr. Usman Malik",   role: "TEACHING_STAFF",    pass: "employee123", permissions: '["MANAGE_GRADES","MANAGE_EXAMS"]' },
+    { id: "u-staff",   email: "staff@lms.com",         name: "John Doe",           role: "NON_TEACHING_STAFF", pass: "staff123", permissions: "[]" },
+    { id: "u-finance", email: "finance@lms.com",       name: "Alice Smith",        role: "FINANCE",    pass: "finance123", permissions: '["MANAGE_FEES","VIEW_FINANCE"]' },
+    { id: "u-hr",      email: "hr@lms.com",            name: "Bob Jenkins",        role: "HR",         pass: "hr123",      permissions: '["MANAGE_USERS","MANAGE_LEAVES"]' },
     { id: "u-student", email: "student@lms.com",        name: "Ahmed Raza",        role: "STUDENT",    pass: "student123", permissions: "[]" },
     { id: "u-parent",  email: "parent@lms.com",         name: "Mr. Raza Sr.",      role: "PARENT",     pass: "parent123",  permissions: "[]" },
   ];
@@ -197,12 +200,15 @@ async function main() {
 
   console.log("\n✅ Seeding complete!");
   console.log("\n📋 Demo login credentials:");
-  console.log("   HEAD_ADMIN → superadmin@lms.com / admin123");
-  console.log("   ADMIN      → admin@lms.com / admin123");
-  console.log("   HOD        → hod@lms.com / employee123");
-  console.log("   TEACHING_STAFF    → employee@lms.com / employee123");
-  console.log("   STUDENT    → student@lms.com / student123");
-  console.log("   PARENT     → parent@lms.com / parent123");
+  console.log("   HEAD_ADMIN         → superadmin@lms.com / admin123");
+  console.log("   ADMIN              → admin@lms.com / admin123");
+  console.log("   HOD                → hod@lms.com / employee123");
+  console.log("   TEACHING_STAFF     → employee@lms.com / employee123");
+  console.log("   NON_TEACHING_STAFF → staff@lms.com / staff123");
+  console.log("   FINANCE            → finance@lms.com / finance123");
+  console.log("   HR                 → hr@lms.com / hr123");
+  console.log("   STUDENT            → student@lms.com / student123");
+  console.log("   PARENT             → parent@lms.com / parent123");
 }
 
 main()

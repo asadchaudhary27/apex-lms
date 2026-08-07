@@ -25,7 +25,7 @@ export async function logExpense(formData: FormData) {
       category,
       description,
       date: dateStr ? new Date(dateStr) : new Date(),
-      recordedById: session.user.id
+      recordedById: session.user.id!
     }
   });
 
