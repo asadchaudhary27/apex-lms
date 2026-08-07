@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  
+  /* Default (Midnight) */
+  --theme-sidebar-start: #0f172a;
+  --theme-sidebar-end: #1e1b4b;
+  --theme-active-bg: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.2));
+  --theme-active-border: rgba(99,102,241,0.3);
+  --theme-active-text: #818cf8;
+}
+
+[data-theme="emerald"] {
+  --theme-sidebar-start: #064e3b;
+  --theme-sidebar-end: #022c22;
+  --theme-active-bg: linear-gradient(135deg, rgba(52,211,153,0.3), rgba(16,185,129,0.2));
+  --theme-active-border: rgba(52,211,153,0.3);
+  --theme-active-text: #34d399;
+}
+
+[data-theme="rose"] {
+  --theme-sidebar-start: #4c0519;
+  --theme-sidebar-end: #28020c;
+  --theme-active-bg: linear-gradient(135deg, rgba(251,113,133,0.3), rgba(225,29,72,0.2));
+  --theme-active-border: rgba(251,113,133,0.3);
+  --theme-active-text: #fb7185;
+}
+
+[data-theme="ocean"] {
+  --theme-sidebar-start: #082f49;
+  --theme-sidebar-end: #081424;
+  --theme-active-bg: linear-gradient(135deg, rgba(56,189,248,0.3), rgba(2,132,199,0.2));
+  --theme-active-border: rgba(56,189,248,0.3);
+  --theme-active-text: #38bdf8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Premium card hover lift */
+.card-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px -8px rgba(0,0,0,0.12);
+}
+
+/* Smooth fade in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.35s ease both;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
