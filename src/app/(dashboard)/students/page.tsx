@@ -1,9 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import StudentTable from "./StudentTable";
 import { redirect } from "next/navigation";
 
-const prisma = new PrismaClient();
+
 
 export default async function StudentsPage() {
   const session = await auth();

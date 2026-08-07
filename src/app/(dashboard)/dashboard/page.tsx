@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
@@ -11,7 +11,7 @@ import {
   BarChart3, ShieldCheck,
 } from "lucide-react";
 
-const prisma = new PrismaClient();
+
 
 function StatCard({ label, value, sub, icon: Icon, gradient }: {
   label: string; value: string | number; sub?: string; icon: any; gradient: string;

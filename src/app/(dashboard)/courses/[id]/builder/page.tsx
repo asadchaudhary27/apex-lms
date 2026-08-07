@@ -1,8 +1,8 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import BuilderUI from "./BuilderUI";
 
-const prisma = new PrismaClient();
+
 
 export default async function CourseBuilderPage({ params }: { params: { id: string } }) {
   const course = await prisma.course.findUnique({

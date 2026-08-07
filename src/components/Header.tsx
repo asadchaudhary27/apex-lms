@@ -1,8 +1,8 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { Bell, Search } from "lucide-react";
 import { auth } from "@/auth";
 
-const prisma = new PrismaClient();
+
 
 export default async function Header({ user }: { user: any }) {
   const unreadCount = user?.id ? await prisma.notification.count({

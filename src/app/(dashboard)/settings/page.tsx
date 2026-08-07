@@ -1,10 +1,10 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import SettingsForm from "./SettingsForm";
 import { redirect } from "next/navigation";
 import { Shield, User, Bell } from "lucide-react";
 
-const prisma = new PrismaClient();
+
 
 export default async function SettingsPage() {
   const session = await auth();

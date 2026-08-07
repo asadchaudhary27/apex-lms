@@ -1,9 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import { DollarSign, FileText, CheckCircle, Clock } from "lucide-react";
 
-const prisma = new PrismaClient();
+
 
 const STATUS_STYLE: Record<string, { bg: string; text: string; icon: any }> = {
   DRAFT:            { bg: "bg-gray-100", text: "text-gray-700", icon: FileText },

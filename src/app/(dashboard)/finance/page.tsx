@@ -1,10 +1,10 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { DollarSign, FileText, Clock, CheckCircle, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
-const prisma = new PrismaClient();
+
 
 export default async function FinanceDashboardPage() {
   const session = await auth();

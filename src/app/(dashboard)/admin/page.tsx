@@ -1,10 +1,10 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { Users, GraduationCap, FileText, DollarSign, BarChart3, Settings, Plus } from "lucide-react";
 
-const prisma = new PrismaClient();
+
 
 export default async function AdminPortal() {
   const session = await auth();

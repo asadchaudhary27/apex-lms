@@ -1,9 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import LeaveRequestClient from "./LeaveRequestClient";
 
-const prisma = new PrismaClient();
+
 
 export default async function TeacherLeavesPage() {
   const session = await auth();

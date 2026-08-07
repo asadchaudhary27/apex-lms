@@ -1,8 +1,8 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import CourseTable from "./CourseTable";
 
-const prisma = new PrismaClient();
+
 
 export default async function CoursesPage() {
   const session = await auth();

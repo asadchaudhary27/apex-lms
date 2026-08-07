@@ -1,8 +1,8 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import LeaveTable from "./LeaveTable";
 
-const prisma = new PrismaClient();
+
 
 export default async function LeavesPage() {
   const session = await auth();

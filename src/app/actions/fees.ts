@@ -1,11 +1,11 @@
 "use server";
 
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 import { auth } from "@/auth";
 import { requireRole, requirePermission, ROLES, PERMISSIONS } from "@/lib/rbac";
 
-const prisma = new PrismaClient();
+
 
 // ─── Generate invoice number ────────────────────────────────
 function generateInvoiceNo(): string {

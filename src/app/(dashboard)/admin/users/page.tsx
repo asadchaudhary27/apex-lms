@@ -1,9 +1,9 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import UserManagementClient from "./UserManagementClient";
 
-const prisma = new PrismaClient();
+
 
 export default async function AdminUsersPage() {
   const session = await auth();

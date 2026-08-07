@@ -1,10 +1,10 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { BookOpen, Users, ClipboardCheck, Award, Calendar } from "lucide-react";
 
-const prisma = new PrismaClient();
+
 
 export default async function TeacherPortal() {
   const session = await auth();

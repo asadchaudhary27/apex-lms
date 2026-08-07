@@ -1,10 +1,10 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 import { Users, FileText, CheckCircle, Clock } from "lucide-react";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import HODLeaveQueueClient from "./HODLeaveQueueClient";
 
-const prisma = new PrismaClient();
+
 
 export default async function HODDashboardPage() {
   const session = await auth();
